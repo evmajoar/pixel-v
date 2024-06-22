@@ -1,0 +1,43 @@
+@use "../../../styles/mixins";
+
+.sidebar {
+  display: none;
+  background-color: var(--color-blue-secondary);
+  padding: 40px 24px 32px;
+
+  @include mixins.break-point(xxl) {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    left: 32px;
+    top: 40px;
+    height: calc(100% - 80px);
+    width: 240px;
+  }
+
+  &--opened {
+    display: flex;
+    flex-direction: column;
+    top: -12px;
+    left: -12px;
+    height: calc(100% + 12px);
+    bottom: 0;
+    width: calc(100% + 12px);
+    position: absolute;
+    z-index: 10;
+    animation: slide-left .5s forwards;
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__navigation {
+    margin-top: 62px;
+  }
+
+  &__social {
+    margin-top: auto;
+    margin-left: 12px;
+  }
+}

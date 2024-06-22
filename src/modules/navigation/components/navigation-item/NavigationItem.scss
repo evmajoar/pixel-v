@@ -1,0 +1,36 @@
+@use '../../../../styles/mixins';
+
+.navigation {
+  &__item {
+    margin-top: 10px;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 10px 12px;
+      color: rgb(var(--color-white-rgb));
+      font-family: var(--font-family-pixel);
+      font-size: 16px;
+      transition: color var(--transition-time);
+    }
+
+    &:hover {
+      background: var(--color-blue-thirdy);
+      @include mixins.border-8bit(3px, var(--color-blue-thirdy));
+
+      a {
+        color: var(--color-purple);
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__item-icon {
+    display: flex;
+    margin-right: 8px;
+    flex-grow: 0;
+  }
+}

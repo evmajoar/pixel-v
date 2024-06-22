@@ -1,0 +1,69 @@
+@use '../../../../styles/mixins';
+
+.info-card {
+  $this: &;
+
+  @include mixins.break-point(xxl) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text,
+  &__counter {
+    font-family: var(--font-family-plexmix);
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-top: 50px;
+
+    @include mixins.break-point(xxl) {
+      margin-top: auto;
+    }
+  }
+
+  &__counter {
+    font-size: 70px;
+    line-height: 1;
+    margin-right: 16px;
+  }
+
+  &__decor {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 101px;
+    height: 101px;
+    right: 16px;
+    top: 21px;
+
+    @include mixins.break-point(xxl) {
+      width: 134px;
+      height: 134px;
+      right: 32px;
+      top: 32px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--purple {
+    color: var(--color-purple);
+
+    #{$this}__title {
+      color: inherit;
+    }
+  }
+
+  &--green {
+    color: var(--color-green);
+
+    #{$this}__title {
+      color: inherit;
+    }
+  }
+}

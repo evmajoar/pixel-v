@@ -1,0 +1,16 @@
+@use "../../../styles/mixins";
+
+.app-content {
+  padding: 12px;
+
+  @include mixins.break-point(xxl) {
+    display: grid;
+    padding: 32px 40px;
+  }
+
+  &__container {
+    @include mixins.break-point(xxl) {
+      padding-left: 260px;
+    }
+  }
+}

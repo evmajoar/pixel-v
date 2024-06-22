@@ -1,0 +1,110 @@
+@use "../../styles/mixins";
+
+.progress {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+
+  &__icon {
+    width: 40px;
+    height: 38px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    @include mixins.break-point(xxl) {
+      width: 46px;
+      height: 44px;
+    }
+
+    svg {
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--color-white-rgb);
+    line-height: 15px;
+
+    @include mixins.break-point(xxl) {
+      line-height: 18px;
+    }
+  }
+
+  &__current {
+    font-family: var(--font-family-pixel);
+    font-size: 10px;
+    z-index: 2;
+
+    @include mixins.break-point(xxl) {
+      font-size: 12px;
+      color: rgb(var(--color-white-rgb));
+    }
+  }
+
+  &__different,
+  &__next {
+    color: rgba(var(--color-white-rgb), 0.6);
+  }
+
+  &__different {
+    font-size: 10px;
+    font-family: var(--font-family-plexmix);
+
+    @include mixins.break-point(xxl) {
+      font-size: 12px;
+    }
+  }
+
+  &__next {
+    font-family: var(--font-family-pixel);
+    font-size: 12px;
+
+    @include mixins.break-point(xxl) {
+      font-family: var(--font-family-plexmix);
+    }
+
+    span {
+      display: none;
+
+      @include mixins.break-point(xxl) {
+        text-transform: uppercase;
+        display: inline;
+      }
+    }
+  }
+
+  &__bar {
+    position: relative;
+    height: 3px;
+    flex-grow: 1;
+    width: 100%;
+    margin-top: 9px;
+    background-color: var(--color-blue-thirdy);
+    @include mixins.border-8bit(2px, var(--color-blue-thirdy));
+
+    @include mixins.break-point(xxl) {
+      height: 5px;
+      margin-top: 8px;
+      @include mixins.border-8bit(3px, var(--color-blue-thirdy));
+    }
+  }
+
+  &__bar-fill {
+    position: absolute;
+    height: inherit;
+    background-color: var(--color-purple);
+    @include mixins.border-8bit(2px, var(--color-purple))
+  }
+}

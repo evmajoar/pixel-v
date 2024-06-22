@@ -1,0 +1,33 @@
+$fonts-dir: '../assets/fonts/';
+
+@font-face {
+  font-family: IBMPlexMono;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$fonts-dir}IBMPlexMono/IBMPlexMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: IBMPlexMono;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url('#{$fonts-dir}IBMPlexMono/IBMPlexMono-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Pixelmix;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$fonts-dir}Pixelmix/Pixelmix-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: PixelSansSerifCondensed;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$fonts-dir}PixelSansSerifCondensed/PixelSansSerifCondensed-Regular.woff2') format('woff2');
+}

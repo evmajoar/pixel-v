@@ -1,0 +1,20 @@
+@use '../../styles/mixins';
+
+.referrals {
+  display: grid;
+  row-gap: 10px;
+
+  @include mixins.break-point(xxl) {
+    grid-template-columns: 1.1fr 1fr;
+    column-gap: 16px;
+  }
+
+  &__info-cards {
+    display: grid;
+    row-gap: 10px;
+
+    @include mixins.break-point(xxl) {
+      row-gap: 20px;
+    }
+  }
+}

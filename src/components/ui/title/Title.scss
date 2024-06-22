@@ -1,0 +1,11 @@
+@use "../../../styles/mixins";
+
+.title {
+  font-family: var(--font-family-pixel);
+  font-size: 20px;
+  color: rgb(var(--color-white-rgb));
+
+  @include mixins.break-point(xxl) {
+    font-size: 28px;
+  }
+}

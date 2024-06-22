@@ -1,0 +1,76 @@
+@use "../../styles/mixins";
+
+.burger {
+  $this: &;
+
+  position: relative;
+  padding: 0;
+  width: 43px;
+  height: 18px;
+  align-items: center;
+  border: none;
+  background: transparent;
+  user-select: none;
+  cursor: pointer;
+  z-index: 11;
+
+  @include mixins.break-point(xxl) {
+    display: none;
+  }
+
+  > span {
+    display: block;
+    width: inherit;
+    height: inherit;
+    font-size: 0;
+    color: transparent;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: inherit;
+      height: 3px;
+      background: rgb(var(--color-white-rgb));
+      transform-origin: 50% 50%;
+      transition: all var(--transition-time);
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &:hover {
+    > span {
+      width: 100%;
+    }
+  }
+
+  &#{$this}--active {
+    > span {
+      width: 100%;
+      background: transparent;
+
+      &::before,
+      &::after {
+        top: 8px;
+      }
+
+      &::before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &::after {
+        width: 100%;
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}

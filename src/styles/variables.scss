@@ -1,0 +1,24 @@
+:root {
+  --font-family-ibm: 'IBMPlexMono','Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-family-plexmix: 'Pixelmix', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  --font-family-pixel: 'PixelSansSerifCondensed', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+
+  --font-size: 14px;
+  --font-line: 21px;
+
+  --font-main: var(--font-size) / var(--font-line) var(--font-family-ibm);
+
+  --color-white-rgb: 255,255,255;
+  --color-blue-primary: #090A17;
+  --color-blue-secondary: #151623;
+  --color-blue-thirdy: #232330;
+  --color-blue-fourth: #151623;
+  --color-purple: #B364D8;
+  --color-green: #83D987;
+  --color-red: #FF3D3D;
+
+  --transition-time: 0.25s;
+}
